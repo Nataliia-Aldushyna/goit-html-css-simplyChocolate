@@ -1,34 +1,193 @@
 :root {
-    --primary-font: 'Montserrat', sans-serif;
+  /* Fonts */
+  --primary-font: 'Montserrat', sans-serif;
+  /* --secondary-font: 'Roboto', sans-serif; */
+  /* Colors */
+  --primary-cl: 17 17 17;
+  --secondary-cl: #fafafa;
+  --accent-cl: #fd9222;
+  --light-cl: #ffffff;
+  --dark-cl: #1e1823;
+  /* Others */
+  --shadow: 10px 10px 12px rgb(123, 123, 123);
+  --item: 3;
 }
 
+/* #region Base styles */
 body {
-    font-family: var(--primary-font);
-    font-size: 14px;
-    background-color: #fafafa;
-    color: #111111;
+  font-family: var(--primary-font);
+  font-size: 14px;
+  color: rgb(var(--primary-cl) / 100%);
+  background-color: var(--secondary-cl);
 }
-
-ul, ol {
-    list-style-type: none;
+ul,
+ol {
+  list-style-type: none;
 }
-
 address {
-    font-style: normal;
+  font-style: normal;
 }
-
 a {
-    color: currentColor;
-    text-decoration: none;
+  color: currentColor;
+  text-decoration: none;
 }
-
 button {
-    font-family: inherit;
-    color: currentColor;
-    cursor: pointer;
+  font-family: inherit;
+  color: currentColor;
+  cursor: pointer;
 }
+/* #endregion */
 
-/* .logo-accent {
+/* #region Common */
+.ingridients-title,
+.made-title,
+.products-title,
+.bestsellers-title,
+.reviews-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.accent {
+  color: var(--accent-cl);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+}
+.btn {
+  font-weight: 600;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+.btn-accent {
+  color: var(--light-cl);
+  background-color: var(--accent-cl);
+}
+.btn-light {
+  color: var(--light-cl);
+  border-color: var(--light-cl);
+}
+.btn-dark {
+  font-size: 18px;
+  border-color: var(--accent-cl);
+}
+/* #endregion */
 
-} */
+/* #region Logo */
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.11;
+  letter-spacing: -0.03em;
+}
+.logo-accent {
+  font-style: italic;
+}
+.logo-icon {
+}
+/* #endregion */
 
+/* #region Socials */
+.socials {
+}
+.socials-item {
+}
+.socials-link {
+}
+.socials-icon {
+}
+/* #endregion */
+
+/* #region Header */
+.header {
+}
+.header-nav {
+}
+/* Navigation */
+.nav {
+}
+.nav-list {
+}
+.nav-item {
+}
+.nav-link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+.header-socials {
+}
+/* #endregion */
+
+/* #region Hero*/
+.hero {
+  background-color: rgba(17, 17, 17, 0.4);
+}
+.hero-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+.hero-list {
+}
+.hero-item {
+}
+.hero-link {
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+.hero-link-icon {
+}
+/* #endregion */
+
+/* #region Benefits */
+.benefits {
+  background-color: var(--dark-cl);
+}
+.benefits-list {
+}
+.benefits-item {
+}
+.benefits-subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22;
+  color: #fff;
+}
+.benefits-desc {
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.7);
+}
+/* #endregion */
+
+/* #region Ingridients */
+.ingridients {
+}
+.ingridients-title {
+}
+.ingredients-list {
+}
+.ingredients-item {
+}
+.ingridients-ill {
+}
+.ingridients-caption {
+}
+/* #endregion */
