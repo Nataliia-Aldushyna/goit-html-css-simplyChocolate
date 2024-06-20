@@ -4,4 +4,31 @@
 
 body {
     font-family: var(--primary-font);
+    font-size: 14px;
+    background-color: #fafafa;
+    color: #111111;
 }
+
+ul, ol {
+    list-style-type: none;
+}
+
+address {
+    font-style: normal;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    color: currentColor;
+    cursor: pointer;
+}
+
+.logo-accent {
+    
+}
+
