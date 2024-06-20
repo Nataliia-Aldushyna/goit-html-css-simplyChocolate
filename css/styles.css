@@ -39,7 +39,7 @@ button {
 /* #endregion */
 
 /* #region Common */
-.ingridients-title,
+.ingredients-title,
 .made-title,
 .products-title,
 .bestsellers-title,
@@ -178,16 +178,16 @@ button {
 /* #endregion */
 
 /* #region Ingridients */
-.ingridients {
+.ingredients {
 }
-.ingridients-title {
+.ingredients-title {
 }
 .ingredients-list {
 }
 .ingredients-item {
 }
-.ingridients-ill {
+.ingredients-ill {
 }
-.ingridients-caption {
+.ingredients-caption {
 }
 /* #endregion */
