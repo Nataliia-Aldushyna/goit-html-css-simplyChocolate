@@ -244,14 +244,13 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* background-image: url('https://static.vecteezy.com/system/resources/previews/015/119/413/original/fog-ambient-long-black-background-free-png.png'),
-    url('../images/hero/hero-bg.jpg'); */
-  /* background-position: bottom 100px left 300px, center; */
-  /* background-attachment: fixed; */
-  /* background-clip: content-box; */
-
-  /* border: 20px dashed red; */
+  /* background-image: url('../images/hero/hero-bg.jpg'); */
+  /* background-position: bottom 100px left 300px, center;
+  background-attachment: fixed;
+  background-clip: content-box;
+  border: 20px dashed red; */
 }
+
 .hero-title {
   width: 484px;
   margin-bottom: 32px;
