@@ -40,10 +40,31 @@
         <nav class="header-nav nav">
           <a class="logo" href="#">
             <span class="logo-accent">SIMPLY</span> CHOCOLATE
-            <svg class="logo-icon" width="24" height="24">
+            <svg class="logo-icon" width="21" height="21">
               <use href="./images/icons.svg#logo"></use>
             </svg>
           </a>
+          <button
+            class="menu-btn header-menu-btn"
+            type="button"
+            aria-label="Open mobile menu button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+            >
+              <path
+                d="M3.5 14H24.5M3.5 7H24.5M3.5 21H24.5"
+                stroke="#111111"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
           <ul class="nav-list">
             <li class="nav-item">
               <a class="nav-link active" href="#home">Home</a>
@@ -102,7 +123,7 @@
     <!-- #endregion -->
     <main>
       <!-- #region Hero -->
-      <section class="hero">
+      <section class="hero hide">
         <div class="container">
           <h1 class="hero-title">
             Treat yourself or a loved one to our&nbsp;finest ingredients for a
@@ -186,7 +207,7 @@
       <!-- #endregion -->
 
       <!-- #region Ingredients -->
-      <section class="ingredients">
+      <section class="ingredients hide">
         <div class="container">
           <h2 class="ingredients-title">
             It all adds up to one exceptional
@@ -269,7 +290,7 @@
       <!-- #endregion -->
 
       <!-- #region Made -->
-      <section class="made" id="made">
+      <section class="made hide" id="made">
         <div class="container">
           <h2 class="section-title made-title">
             How it’s <span class="accent">made</span>?
@@ -317,7 +338,7 @@
       <!-- #endregion  -->
 
       <!-- #region Products -->
-      <section class="products">
+      <section class="products hide">
         <div class="container">
           <h2 class="products-title section-title">
             Our <span class="accent">products</span>
@@ -425,7 +446,7 @@
       <!-- #endregion -->
 
       <!-- #region Bestsellers -->
-      <section class="bestsellers">
+      <section class="bestsellers hide">
         <div class="container">
           <h2 class="bestsellers-title section-title">
             <span class="accent">Top</span> sellers
@@ -491,7 +512,7 @@
       <!-- #endregion -->
 
       <!-- #region Reviews -->
-      <section class="reviews" id="reviews">
+      <section class="reviews hide" id="reviews">
         <div class="container">
           <h2 class="reviews-title section-title">
             <span class="accent">Chocolate</span> is loved
@@ -550,7 +571,7 @@
       <!-- #endregion -->
     </main>
     <!-- #region Footer -->
-    <footer class="footer">
+    <footer class="footer hide">
       <div class="container">
         <div class="footer-top">
           <p class="footer-slogan">
@@ -636,7 +657,7 @@
     </footer>
     <!-- #endregion -->
 
-    <div class="backdrop">
+    <div class="backdrop hide">
       <div class="modal">
         <button class="modal-close-btn" type="button">
           <svg class="modal-close-icon" width="28" height="28">
@@ -740,13 +761,5 @@
         </form>
       </div>
     </div>
-
-    <!-- <dialog>
-      <button type="button">
-        <svg class="" width="28" height="28">
-          <use href="./images/icons.svg#x-close"></use>
-        </svg>
-      </button>
-    </dialog> -->
   </body>
 </html>
