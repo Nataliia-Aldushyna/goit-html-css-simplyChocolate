@@ -1,3 +1,6 @@
+.hide {
+  display: none;
+}
 /* #region Variables */
 :root {
   /* Fonts */
@@ -139,13 +142,27 @@ img {
 
 /* #region Common */
 .container {
-  width: 1168px;
-  padding: 0 16px;
+  min-width: 320px;
+  max-width: 375px;
   margin: 0 auto;
+  padding: 0 20px;
 
-  /* outline: 2px solid red;
-  outline-offset: -2px; */
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .container {
+    max-width: 1168px;
+    padding: 0 16px;
+  }
+}
+
 .ingredients,
 .made,
 .products,
@@ -212,23 +229,33 @@ img {
 .card-set-item {
   width: calc((100% - var(--col-indent) * (var(--items) - 1)) / var(--items));
 }
-
 /* #endregion */
 
 /* #region Logo */
 .logo {
   display: inline-flex;
-  gap: 4px;
   align-items: center;
+  gap: 4px;
+  padding: 20px 0;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 1.11;
+  font-size: 14px;
+  line-height: 1.28;
   letter-spacing: -0.03em;
+}
+@media only screen and (min-width: 1168px) {
+  .logo {
+    font-size: 18px;
+    line-height: 1.11;
+  }
 }
 .logo-accent {
   font-style: italic;
 }
-.logo-icon {
+@media only screen and (min-width: 1168px) {
+  .logo-icon {
+    width: 24px;
+    height: 24px;
+  }
 }
 /* #endregion */
 
@@ -269,10 +296,22 @@ img {
 .header .container {
   display: flex;
   align-items: center;
-  gap: 90px;
+
+  gap: 28px;
+}
+@media only screen and (min-width: 1168px) {
+  .header .container {
+    gap: 90px;
+  }
 }
 .header-nav {
 }
+@media only screen and (min-width: 768px) {
+  .header-menu-btn.menu-btn {
+    display: none;
+  }
+}
+
 /* Navigation */
 .nav {
   display: flex;
@@ -284,7 +323,17 @@ img {
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .nav-list {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .nav-list {
+    gap: 24px;
+  }
 }
 .nav-item {
 }
@@ -296,12 +345,6 @@ img {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: -0.02em;
-
-  /* transition-property: color;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in-out;
-  transition-delay: 1000ms; */
-
   transition: var(--anim-fast);
   transition-property: color, opacity, transform;
 }
@@ -329,6 +372,11 @@ img {
   --icon-cl: rgb(var(--primary-cl));
   --icon-active-cl: rgb(var(--accent-cl));
   --frame-cl: rgb(var(--primary-cl) / 10%);
+}
+@media only screen and (max-width: 767px) {
+  .header-socials {
+    display: none;
+  }
 }
 /* #endregion */
 
@@ -433,8 +481,49 @@ img {
 
 /* #region Benefits */
 .benefits {
-  padding: 50px 0;
+  padding: 20px 0;
   background: rgb(var(--dark-cl));
+}
+@media only screen and (min-width: 768px) {
+  .benefits {
+    padding: 50px 0;
+  }
+}
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  column-gap: 88px;
+  row-gap: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .benefits-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 44px;
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .benefits-list {
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .benefits-item {
+    position: relative;
+    width: 308px;
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .benefits-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 62px);
+    right: -45px;
+    width: 1px;
+    height: 124px;
+    background: rgba(var(--light-cl) / 50%);
+  }
 }
 .benefits-wrapper {
   display: flex;
@@ -450,30 +539,12 @@ img {
 .benefits-icon {
   fill: currentColor;
 }
-.benefits-list {
-  display: flex;
-  justify-content: center;
-  gap: 88px;
-}
-.benefits-item {
-  position: relative;
-  width: 308px;
-}
-.benefits-item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  top: calc(50% - 62px);
-  right: -45px;
-  width: 1px;
-  height: 124px;
-  background: rgba(var(--light-cl) / 50%);
-}
 .benefits-subtitle {
   margin-bottom: 18px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.22;
-  color: #fff;
+  color: rgb(var(--white-cl));
 }
 .benefits-desc {
   line-height: 1.29;
@@ -1028,3 +1099,14 @@ dialog::backdrop {
   inset: 0;
   background-color: rgba(0, 0, 0 0.25);
 } */
+
+/* #region Mobile menu */
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+/* #endregion */
